@@ -8,7 +8,7 @@ public class QueueListenerMain {
 
     public static void main(String[] argv) throws Exception {
 
-        MessageProcessor mp = new MessageProcessor();
+        MessageProcessor mp = new MessageProcessor("","",0);
         QueueingConsumer consumer = mp.getConsumer();
         while (true) {
             QueueingConsumer.Delivery delivery = consumer.nextDelivery();

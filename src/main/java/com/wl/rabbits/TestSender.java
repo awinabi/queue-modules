@@ -1,9 +1,12 @@
 package com.wl.rabbits;
 
 import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.FileReader;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.Properties;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -14,18 +17,26 @@ import com.rabbitmq.client.ConnectionFactory;
 import com.rabbitmq.client.GetResponse;
 
 public class TestSender {
-	private final static String QUEUE_NAME = "process-queue";
-	private final static String HOST_NAME = "localhost";
+	private final String QUEUE_NAME;
+	private final String HOST_NAME;
 	// private final static String HOST_NAME = "192.168.101.112";
-	private final static int PORT = 5672;
+	private final int PORT;
+
+	public TestSender(String queueName, String hostName, int port) {
+		QUEUE_NAME = queueName != null ? queueName : "default-queue";
+		HOST_NAME = hostName != null ? hostName : "localhost";
+		PORT = port == 0 ? 5672 : port;
+	}
 
 	private final static String SAMPLE_FILE = "json/sample.json";
 
 	private StringBuilder readJSONFileToString() {
 		StringBuilder sBuilder = new StringBuilder();
 		try {
-			InputStream inStream =getClass().getClassLoader().getResourceAsStream(SAMPLE_FILE);
-			BufferedReader in =  new BufferedReader(new InputStreamReader(inStream));
+			InputStream inStream = getClass().getClassLoader()
+					.getResourceAsStream(SAMPLE_FILE);
+			BufferedReader in = new BufferedReader(new InputStreamReader(
+					inStream));
 
 			String s = null;
 			while ((s = in.readLine()) != null) {
@@ -105,7 +116,20 @@ public class TestSender {
 	}
 
 	public static void main(String[] args) {
-		TestSender pm = new TestSender();
+		Properties configProperties = new Properties();
+		try {
+			FileInputStream fis = new FileInputStream("./config.properties");
+			if (fis != null) {
+				configProperties.load(fis);
+				System.out.println("read properties file config.properties");
+			}
+		} catch (Exception e) {}
+		
+		String queueName = configProperties.getProperty("rabbitmq.queue.name");
+		String hostName = configProperties.getProperty("rabbitmq.server.host");
+		int port = configProperties.getProperty("rabbitmq.server.port") == null ? 0 : new Integer(configProperties.getProperty("rabbitmq.server.port"));
+		
+		TestSender pm = new TestSender(queueName, hostName, port);
 		JSONObject jsonObject = pm.parseJSON();
 		String jsonMessage = pm.getJSONMessage(jsonObject);
 		System.out.println("Pushing document ~ ["

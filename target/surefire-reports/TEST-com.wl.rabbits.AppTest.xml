@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.023" errors="0" skipped="0" tests="1" name="com.wl.rabbits.AppTest">
+<testsuite failures="0" time="0.011" errors="0" skipped="0" tests="1" name="com.wl.rabbits.AppTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/mnt/programs/jdk1.6.0_27/jre/lib/i386"/>
@@ -14,7 +14,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="unknown"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/mnt/code/disneyland/queue-modules"/>
+    <property name="user.dir" value="/mnt/code/disneyland/eWorkspace/queue-modules"/>
     <property name="java.runtime.version" value="1.6.0_27-b07"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="/mnt/programs/jdk1.6.0_27/jre/lib/endorsed"/>
@@ -26,7 +26,7 @@
     <property name="os.name" value="Linux"/>
     <property name="classworlds.conf" value="/mnt/programs/apache-maven-3.0.5/bin/m2.conf"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.library.path" value="/mnt/programs/jdk1.6.0_27/jre/lib/i386/server:/mnt/programs/jdk1.6.0_27/jre/lib/i386:/mnt/programs/jdk1.6.0_27/jre/../lib/i386:/usr/java/packages/lib/i386:/lib:/usr/lib"/>
+    <property name="java.library.path" value="/mnt/programs/jdk1.6.0_27/jre/lib/i386/server:/mnt/programs/jdk1.6.0_27/jre/lib/i386:/mnt/programs/jdk1.6.0_27/jre/../lib/i386:/usr/lib/oracle/xe/app/oracle/product/10.2.0/server/lib::/usr/java/packages/lib/i386:/lib:/usr/lib"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="50.0"/>
     <property name="sun.management.compiler" value="HotSpot Tiered Compilers"/>
@@ -58,5 +58,5 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="0.007" classname="com.wl.rabbits.AppTest" name="testApp"/>
+  <testcase time="0.002" classname="com.wl.rabbits.AppTest" name="testApp"/>
 </testsuite>
