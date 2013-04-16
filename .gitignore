@@ -3,3 +3,6 @@
 .idea/
 target/classes
 target/test-classes
+.classpath
+.project
+.settings/
