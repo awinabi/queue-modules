@@ -2,6 +2,7 @@ package com.wl.rabbits;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 
 import org.json.simple.JSONObject;
@@ -18,15 +19,14 @@ public class TestSender {
 	// private final static String HOST_NAME = "192.168.101.112";
 	private final static int PORT = 5672;
 
-	private final static String SAMPLE_FILE = "/json/sample.json";
+	private final static String SAMPLE_FILE = "json/sample.json";
 
 	private StringBuilder readJSONFileToString() {
 		StringBuilder sBuilder = new StringBuilder();
 		try {
-			System.out.println("PATH of the json file is :" + getClass().getResource(SAMPLE_FILE).getPath());
-			BufferedReader in = new BufferedReader(new FileReader(
-					getClass().getResource(SAMPLE_FILE).getPath()));
-			
+			InputStream inStream =getClass().getClassLoader().getResourceAsStream(SAMPLE_FILE);
+			BufferedReader in =  new BufferedReader(new InputStreamReader(inStream));
+
 			String s = null;
 			while ((s = in.readLine()) != null) {
 				sBuilder = sBuilder.append(s);
