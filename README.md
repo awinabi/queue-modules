@@ -11,15 +11,15 @@ For sending and receiving data to a rabbitmq queue, using multi-threaded client
 
 ### Running the jar File
 
-This assumes the dependent jar files are in the lib folder [amqp-client-3.0.4.jar, json-simple-1.1.1.jar ]
+After running `mvn package` the jar file dependencies will be in the target/dependency folder
 
-To send messages to the queue run the following :
+To send messages to the queue run the following in the target directory:
 
-    ~> java -cp queue-modules-<version>.jar:lib/amqp-client-3.0.4.jar:lib/json-simple-1.1.1.jar com.wl.rabbits.TestSender
+    ~> java -cp queue-modules-1.0.1.jar:dependency/* com.wl.rabbits.TestSender
 
 
-To receive messages from the queue run the following :
+To receive messages from the queue run the following in the target directory:
 
-    ~> java -cp queue-modules-<version>.jar:lib/amqp-client-3.0.4.jar:lib/json-simple-1.1.1.jar com.wl.rabbits.MessageProcessor
+    ~> java -cp queue-modules-1.0.1.jar:dependency/* com.wl.rabbits.MessageProcessor
 
 
