@@ -1,16 +1,24 @@
-Running the mvn project
-------------------------------------------
-- To build the package run
-      mvn package
+# queue-modules
 
-Executing the jar file
-------------------------------------------
-- After the jar file is generated run the following for sending and receiving
-  messages from the local queue
-    - Pumping messages to queue
+For sending and receiving data to a rabbitmq queue, using multi-threaded client
 
-              java -cp queue-modules-<version>.jar:lib/amqp-client-3.0.4.jar:lib/json-simple-1.1.1.jar com.wl.rabbits.TestSender
 
-    - Receiving messages from queue
+## How to Use
 
-              java -cp queue-modules-<version>.jar:lib/amqp-client-3.0.4.jar:lib/json-simple-1.1.1.jar com.wl.rabbits.MessageProcessor
+### Build the mvn Package
+
+    ~> mvn package
+
+### Running the jar File
+
+This assumes the dependent jar files are in the lib folder [amqp-client-3.0.4.jar, json-simple-1.1.1.jar ]
+
+1. To send messages to the queue run the following
+
+    ~> java -cp queue-modules-<version>.jar:lib/amqp-client-3.0.4.jar:lib/json-simple-1.1.1.jar com.wl.rabbits.TestSender
+
+2. To receive messages from the queue run the following
+
+    ~> java -cp queue-modules-<version>.jar:lib/amqp-client-3.0.4.jar:lib/json-simple-1.1.1.jar com.wl.rabbits.MessageProcessor
+
+
