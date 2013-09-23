@@ -1,122 +1,44 @@
 {
-  "greenCCD": {
-    "header": {
-      "documentID": { "root": "1111111test-1e0d-11e0-ac64-0800200c9a66" },
-      "title": "Continuity of Care Document",
-      "version": {
-        "number": "1",
-        "setID": { "extension": "1" }
+    "url": "https://api.github.com/repos/octocat/Hello-World/commits/6dcb09b5b57875f334f61aebed695e2e4193db5e",
+    "sha": "6dcb09b5b57875f334f61aebed695e2e4193db5e",
+    "commit": {
+      "url": "https://api.github.com/repos/octocat/Hello-World/git/commits/6dcb09b5b57875f334f61aebed695e2e4193db5e",
+      "author": {
+        "name": "Monalisa Octocat",
+        "email": "support@github.com",
+        "date": "2011-04-14T16:00:49Z"
       },
-      "language": { "code": "en-US" },
-      "confidentiality": {
-        "code": "N",
-        "codeSystem": "2.16.840.1.113883.5.25"
+      "committer": {
+        "name": "Monalisa Octocat",
+        "email": "support@github.com",
+        "date": "2011-04-14T16:00:49Z"
       },
-      "documentTimestamp": { "value": "20110111000000-0500" },
-      "personalInformation": {
-        "patientInformation": {
-          "personID": {
-            "root": "2.16.840.1.113883.19.5",
-            "extension": "996-756-495"
-          },
-          "personAddress": {
-            "streetAddressLine": "5739 Hazel Street",
-            "city": "Williamsport",
-            "state": "PA",
-            "postalCode": "17701"
-          },
-          "personPhone": "tel:1+5708982189" ,
-          "personInformation": {
-            "personName": {
-              "given": "James",
-              "family": "Stuart"
-            },
-            "gender": {
-              "codeSystem": "2.16.840.1.113883.5.1",
-              "code": "M"
-            },
-            "personDateOfBirth": "19530215113005-0500"
-          }
-        }
-      },
-      "custodian": {
-        "custodianID":  "NI" ,
-        "custodianName": "NI" ,
-        "custodianAddress":  "NI",
-        "custodianTelecom": "NI"
-      },
-      "healthcareProviders": {
-        "careProvisionDateRange": {
-          "low":  "2002" ,
-          "high":  "2010"
-        },
-        "healthcareProvider": {
-          "role": {
-            "codeSystem": "2.16.840.1.113883.12.443",
-            "code": "PP"
-          },
-          "dateRange": {
-            "low":  "20020627" ,
-            "high": "20100325"
-          },
-          "providerEntity": {
-            "providerID":  "NI" ,
-            "providerAddress": "NI" ,
-            "providerTelecom":  "NI" ,
-            "providerName": {
-              "given": "Thomas",
-              "family": "Henry",
-              "suffix": "MD"
-            },
-            "providerOrganizationName":  "NI"
-          }
-        }
-      },
-      "informationSource": {
-        "author": {
-          "authorId":  "NI" ,
-          "authorTime":  "NI" ,
-          "authorName": {
-            "given": "Thomas",
-            "family": "Henry",
-            "suffix": "MD"
-          },
-          "address":  "NI" ,
-          "telecom": "NI"
-        }
+      "message": "Fix all the bugs",
+      "tree": {
+        "url": "https://api.github.com/repos/octocat/Hello-World/tree/6dcb09b5b57875f334f61aebed695e2e4193db5e",
+        "sha": "6dcb09b5b57875f334f61aebed695e2e4193db5e"
       }
     },
-    "body": {
-      "results": {
-        "resultsOrganizer": {
-          "code": {
-            "code": "275711006",
-            "codeSystem": "2.16.840.1.113883.6.96",
-            "displayName": "Chemistry"
-          },
-          "effectiveTime": "NI" ,
-          "result": {
-            "resultID": "NI" ,
-            "resultDateTime": "NI" ,
-            "resultType": {
-              "code": "14647-2",
-              "codeSystem": "2.16.840.1.113883.6.1",
-              "originalText": "Total cholesterol"
-            },
-            "resultStatus": { "code": "completed" },
-            "resultValue": {
-              "physicalQuantity": {
-                "unit": "mg/dl",
-                "value": "135"
-              }
-            },
-            "resultInterpretation": {
-              "code": "N",
-              "codeSystem": "2.16.840.1.113883.5.83"
-            }
-          }
-        }
+    "author": {
+      "login": "octocat",
+      "id": 1,
+      "avatar_url": "https://github.com/images/error/octocat_happy.gif",
+      "gravatar_id": "somehexcode",
+      "url": "https://api.github.com/users/octocat"
+    },
+    "committer": {
+      "login": "octocat",
+      "id": 1,
+      "avatar_url": "https://github.com/images/error/octocat_happy.gif",
+      "gravatar_id": "somehexcode",
+      "url": "https://api.github.com/users/octocat"
+    },
+    "parents": [
+      {
+        "url": "https://api.github.com/repos/octocat/Hello-World/commits/6dcb09b5b57875f334f61aebed695e2e4193db5e",
+        "sha": "6dcb09b5b57875f334f61aebed695e2e4193db5e"
       }
-    }
-  }
+    ]
 }
+
+

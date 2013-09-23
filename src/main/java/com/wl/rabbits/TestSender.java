@@ -64,17 +64,17 @@ public class TestSender {
 	}
 
 	public String getDocumentId(JSONObject jsonObject) {
-		String rootID = null;
+		String authorName = null;
 		try {
-			JSONObject greenCCD = (JSONObject) jsonObject.get("greenCCD");
-			JSONObject header = (JSONObject) greenCCD.get("header");
-			JSONObject docID = (JSONObject) header.get("documentID");
-			rootID = (String) docID.get("root");
+			JSONObject commit = (JSONObject) jsonObject.get("commit");
+			JSONObject author = (JSONObject) commit.get("author");
+			JSONObject authorNameObj = (JSONObject) header.get("name");
+			authorName = (String) authorNameObj.get("name");
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return rootID;
+		return authorName;
 	}
 
 	public String getJSONMessage(JSONObject jsonObject) {
